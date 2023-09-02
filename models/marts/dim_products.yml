@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: Products dimension table.
+    columns: 
+      - name: product_id
+        description: primary key for dim_products.
+        tests:
+          - unique
+          - not_null
+      - name: productsubcategory_id
+        description: ID for each subcategory.	
+      - name: productcategory_id
+        description: ID for each category.
+      - name: subcategoryname
+        description: Name for each subcategory.
+      - name: categoryname
+        description: Name for each category.
+      - name: productname
+        description: Name of each product.
+      - name: productcolor
+        description: Color of each product.
