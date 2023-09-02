@@ -1,33 +1,109 @@
 version: 2
 sources:
   - name: sap
-    schema: sap_adventureworks
+    schema: sap_adw
     description: Fonte de dados do SAP da Adventure Works
     tables:
-      - name: employees
+      - name: productcategory
+        description: Tabela com ID e nome das categorias de produtos.
         columns:
-          - name: employee_id
+          - name: productcategory_id
             tests:
               - unique
               - not_null
-      - name: products
-        description: Tabela com os produtos comercializados pela Northwind.
+      - name: productsubcategory
+        description: Tabela com ID e nome das subcategorias de produtos.
+        columns:
+          - name: productsubcategory_id
+            tests:
+              - unique
+              - not_null
+      - name: product
+        description: Tabela com informações sobre os produtos.
         columns:
           - name: product_id
             tests:
-              - unique
-              - not_null
-      - name: categories
-        description: Tabela com as categorias dos produtos comercializados pela Northwind.
-      - name: suppliers
-        description: Fornecedores dos produtos comercializados pela Northwind.
-      - name: orders
-        description: Uma linha por pedido. Inclui pedidos cancelados e deletados.
+            - unique
+            - not_null
+      - name: store
+        description: Tabela com informações sobre as lojas dos clientes.
+        columns:
+          - name: client_id
+            tests:
+            - unique
+            - not_null
+      - name: personcreditcard
+        description: Tabela com ID do cliente e do cartão de credito.
+        columns:
+          - name: client_id
+            tests:
+            - unique
+            - not_null
+      - name: creditcard
+        description: Tabela com ID do cartão de credito e tipo do cartão.
+        columns:
+          - name: creditcard_id
+            tests:
+            - unique
+            - not_null      
+      - name: businessentity
+        description: Tabela com ID dos clientes.
+        columns:
+          - name: client_id
+            tests:
+            - unique
+            - not_null       
+      - name: stateprovince
+        description: Tabela com informações sobre Pais e Estado.
+        columns:
+          - name: stateprovince_id
+            tests:
+            - unique
+            - not_null       
+      - name: countryregion
+        description: Tabela com com codigo e nome dos paises.
+        columns:
+          - name: countryregion_code
+            tests:
+            - unique
+            - not_null       
+      - name: address
+        description: Informações de endereços com nomes das cidades.
+        columns:
+          - name: address_id
+            tests:
+            - unique
+            - not_null
+      - name: businessentityaddress
+        description: Ligação entre clientes e endereços.
+        columns:
+          - name: client_id
+            tests:
+            - unique
+            - not_null          
+      - name: salesorderheader
+        description: Tabela principal de vendas.
         columns:
           - name: order_id
-            description: Chave primária da tabela de ordens.
             tests:
-              - unique
-              - not_null
-      - name: order_details
-        description: Detalhe de item linha para cada pedido da tabela ordens.
+            - unique
+            - not_null          
+      - name: salesorderdetail
+        description: Tabela com detalhes sobre as vendas.
+        columns:
+          - name: orderdetail_id
+            tests:
+            - unique
+            - not_null          
+      - name: salesorderheadersalesreason
+        description: Tabela com IDS da salesorder e salesreason.
+        columns:
+          - name: order_id
+            tests:
+            - not_null
+      - name: salesreason
+        description: Tabela com informações sobre os motivos de compra dos clientes.
+        columns:
+          - name: reason_id
+            tests:
+            - not_null                                                                                                                                                                              
