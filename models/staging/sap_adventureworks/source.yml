@@ -1,6 +1,6 @@
 version: 2
 sources:
-  - name: sap_adw
+  - name: sap
     schema: sap_adw
     description: Fonte de dados do SAP da Adventure Works
     tables:
@@ -77,7 +77,7 @@ sources:
       - name: businessentityaddress
         description: Ligação entre clientes e endereços.
         columns:
-          - name: businessentityid
+          - name: addressid
             tests:
             - unique
             - not_null          
@@ -91,7 +91,7 @@ sources:
       - name: salesorderdetail
         description: Tabela com detalhes sobre as vendas.
         columns:
-          - name: orderdetailid
+          - name: salesorderdetailid
             tests:
             - unique
             - not_null          
