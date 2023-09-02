@@ -1,8 +1,8 @@
 with
     source_businessentityaddress as (
         select
-            cast(businessentityid as int) as client_id,            
-            cast(addressid as int) as address_id
+            cast(addressid as int) as address_id,            
+            cast(businessentityid as int) as client_id
         from {{ source('sap', 'businessentityaddress') }}
     )
 select *
