@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_salesreason
+    description: Dimension table of sales reasons.
+    columns: 
+      - name: reason_pk
+        description: primary key for dim_salesreason.
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        description: ID for each order.
+      - name: reason_id
+        description: ID for each reason.
+      - name: reason
+        description: Reason of the order.
+      - name: reason_type
+        description: Type of the reason of the order.

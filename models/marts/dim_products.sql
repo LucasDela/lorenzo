@@ -18,10 +18,10 @@ with
             , productcategory.productcategory_id
             , productsubcategory.productsubcategoryname
             , productcategory.productcategoryname
-            , prduct.productname
+            , product.productname
             , product.productcolor
         from product
-        left join productsubcategory on product.productsubcategory_id = productsubcategry.productsubcategory_id
+        left join productsubcategory on product.productsubcategory_id = productsubcategory.productsubcategory_id
         left join productcategory on productsubcategory.productcategory_id = productcategory.productcategory_id
     )
 select *

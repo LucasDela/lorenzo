@@ -2,7 +2,7 @@ version: 2
 sources:
   - name: sap
     schema: sap_adw
-    description: Fonte de dados do SAP da Adventure Works
+    description: Adventure works SAP data source.
     tables:
       - name: productcategory
         description: Tabela com ID e nome das categorias de produtos.
