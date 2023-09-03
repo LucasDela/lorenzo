@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: dim_location
+    description: Table with location information for each client.
+    columns: 
+      - name: address_id
+        description: primary key for dim_products and ID for each address.
+        tests:
+          - unique
+          - not_null
+      - name: client_id
+        description: ID for each client.
+      - name: country_code
+        description: code for each country.
+      - name: territory_id
+        description: ID for each territory.
+      - name: stateprovince_id
+        description: ID for each state province.
+      - name: state_code
+        description: Code for each state.
+      - name: statename
+        description: Name of each state.
+      - name: city
+        description: Name of each city.
+      - name: country_name
+        description: Name of each country.

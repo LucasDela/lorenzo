@@ -1,7 +1,7 @@
 with
     source_salesorderdetail as (
         select
-            cast(salesorderdetailid as int) as oderdetail_id,
+            cast(salesorderdetailid as int) as orderdetail_id,
             cast(salesorderid as int) as order_id,
             cast(productid as int) as product_id,
             cast(specialofferid as int) as offer_id,

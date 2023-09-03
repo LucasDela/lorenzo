@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: dim_clients
+    description: Clients dimension table.
+    columns: 
+      - name: client_id
+        description: primary key for dim_clients.
+        tests:
+          - unique
+          - not_null
+      - name: creditcard_id
+        description: ID for each credit card.
+      - name: cardtype
+        description: Type of each credit card.
+      - name: clientname
+        description: Name of each client.
