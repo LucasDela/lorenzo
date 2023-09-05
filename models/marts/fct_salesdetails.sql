@@ -32,6 +32,7 @@ with
             , stg_salesorderdetail.unit_price
             , stg_salesorderdetail.discount as unitprice_discount
             , stg_salesorderheader.total
+            , cast(unit_price * order_qty as numeric) as total_sales
         from dim_salesdetail
         left join dim_location on dim_salesdetail.shiptoaddress_id = dim_location.address_id
         left join stg_salesorderdetail on dim_salesdetail.orderdetail_id = stg_salesorderdetail.orderdetail_id
