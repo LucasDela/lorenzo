@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: fct_sales
+    description: Fact table.
+    columns: 
+      - name: order_id
+        description: primary key for fct_sales with each order ID.
+        tests:
+          - unique
+          - not_null
+      - name: creditcard_id
+        description: ID for each creditcard.
+      - name: client_id
+        description: ID for each client.
+      - name: reason_id
+        description: ID for each reason.
+      - name: shiptoaddress_id
+        description: ID for each address the order have been shipped to.
+      - name: country_code
+        description: Code for each country.
+      - name: stateprovince_id
+        description: ID for each state province.
+      - name: total
+        description: Total cost of the order.
+      - name: order_date
+        description: Date of the order.

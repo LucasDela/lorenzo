@@ -4,28 +4,24 @@ models:
   - name: dim_salesdetail
     description: Dimension table of sales details.
     columns: 
-      - name: orderdetail_id
-        description: primary key for dim_salesdetail with order details ID.
+      - name: orderdetail_pk
+        description: primary key for dim_salesdetail.
         tests:
           - unique
           - not_null
+      - name: orderdetail_id
+        description: ID for each order detail.    
       - name: order_id
         description: ID for each order.
       - name: product_id
         description: ID for each product.
-      - name: territory_id
-        description: ID for each territory.
-      - name: offer_id
-        description: ID for each offer.
       - name: creditcard_id
         description: ID for each credit card.
       - name: customer_id
         description: ID for each customer.
+      - name: shiptoaddress_id
+        description: Address to ship for each order.
       - name: order_date
-        description: Date of the order.
-      - name: due_date
-        description: Date supposed to ship.
-      - name: ship_date
-        description: Date shipped.
+        description: Date for each order.
       - name: status
         description: Status of the order.
