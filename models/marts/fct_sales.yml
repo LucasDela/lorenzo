@@ -19,6 +19,8 @@ models:
         description: ID for each address the order have been shipped to.
       - name: country_code
         description: Code for each country.
+      - name: status
+        description: Status of each order.
       - name: stateprovince_id
         description: ID for each state province.
       - name: total

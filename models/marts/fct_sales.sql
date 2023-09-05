@@ -19,7 +19,7 @@ with
             , stg_salesorderheader.shiptoaddress_id
             , dim_location.stateprovince_id
             , dim_location.country_code
-            , stg_sap__salesorderheader.status
+            , stg_salesorderheader.status
             , stg_salesorderheader.subtotal
             , stg_salesorderheader.tax
             , stg_salesorderheader.freight
