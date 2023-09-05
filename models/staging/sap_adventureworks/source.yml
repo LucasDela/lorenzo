@@ -120,11 +120,4 @@ sources:
           - name: businessentityid
             tests:
             - unique  
-            - not_null 
-      - name: businessentitycontact
-        description: Link between person_id and businessentity_id.
-        columns:
-          - name: businessentityid
-            tests:
-            - unique  
-            - not_null                                                                                                                                                                               
+            - not_null                                                                                                                                                                           
