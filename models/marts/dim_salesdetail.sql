@@ -9,17 +9,15 @@ with
     )
     , dim_salesdetail as (
         select
-            salesorderdetail.orderdetail_id
-            , salesorderheader.order_id
+            cast((salesorderheader.order_id || '-' || salesorderdetail.orderdetail_id) as string) as orderdetail_pk
+            , salesorderheader.order_id            
+            , salesorderdetail.orderdetail_id
             , salesorderdetail.product_id
-            , salesorderheader.territory_id
-            , salesorderdetail.offer_id
             , salesorderheader.creditcard_id
             , salesorderheader.customer_id
+            , salesorderheader.shiptoaddress_id
+            , salesorderheader.status            
             , salesorderheader.order_date
-            , salesorderheader.due_date
-            , salesorderheader.ship_date
-            , salesorderheader.status
         from salesorderdetail
         left join salesorderheader on salesorderdetail.order_id = salesorderheader.order_id
     )

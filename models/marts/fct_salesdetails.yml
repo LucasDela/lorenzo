@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: fct_salesdetails
+    description: Fact sales with details.
+    columns: 
+      - name: orderdetail_pk
+        description: primary key for fct_salesdetails.
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        description: ID for each order.
+      - name: orderdetail_id
+        description: ID for each order detail.
+      - name: product_id
+        description: ID for each product.
+      - name: creditcard_id
+        description: ID for each creditcard.
+      - name: customer_id
+        description: ID for each customer.
+      - name: reason_id
+        description: ID for each reason of the order.
+      - name: shiptoaddress_id
+        description: ID for each address the order have to be shipped.
+      - name: stateprovince_id
+        description: ID for each stateprovince.
+      - name: country_code
+        description: Code for each country.
+      - name: status
+        description: Status of the order.
+      - name: order_date
+        description: Date of each order.
+      - name: order_qty
+        description: Quantity of products for each order.
+      - name: unit_price
+        description: Price of unit for each product.
+      - name: unitprice_discount
+        description: Discount of each product per unit.
+      - name: total
+        description: Total of the order.

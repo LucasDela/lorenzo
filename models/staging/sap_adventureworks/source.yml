@@ -5,105 +5,126 @@ sources:
     description: Adventure works SAP data source.
     tables:
       - name: productcategory
-        description: Tabela com ID e nome das categorias de produtos.
+        description: Table with IDS for each product category and its information.
         columns:
           - name: productcategoryid
             tests:
               - unique
               - not_null
       - name: productsubcategory
-        description: Tabela com ID e nome das subcategorias de produtos.
+        description: Table with IDS for each product subcategory and its information.
         columns:
           - name: productsubcategoryid
             tests:
               - unique
               - not_null
       - name: product
-        description: Tabela com informações sobre os produtos.
+        description: Table with product details and information.
         columns:
           - name: productid
             tests:
             - unique
             - not_null
       - name: store
-        description: Tabela com informações sobre as lojas dos clientes.
+        description: Table with name and ID for each client store.
         columns:
           - name: businessentityid
             tests:
             - unique
             - not_null
       - name: personcreditcard
-        description: Tabela com ID do cliente e do cartão de credito.
+        description: Table with IDs for creditcard and clients link.
         columns:
           - name: businessentityid
             tests:
             - unique
             - not_null
       - name: creditcard
-        description: Tabela com ID do cartão de credito e tipo do cartão.
+        description: Table with ID and information of credit cards.
         columns:
           - name: creditcardid
             tests:
             - unique
             - not_null      
       - name: businessentity
-        description: Tabela com ID dos clientes.
+        description: Table with businessentity IDS.
         columns:
           - name: businessentityid
             tests:
             - unique
             - not_null       
       - name: stateprovince
-        description: Tabela com informações sobre Pais e Estado.
+        description: Table with information of country and state province.
         columns:
           - name: stateprovinceid
             tests:
             - unique
             - not_null       
       - name: countryregion
-        description: Tabela com com codigo e nome dos paises.
+        description: Table with country's name and and code.
         columns:
           - name: countryregioncode
             tests:
             - unique
             - not_null       
       - name: address
-        description: Informações de endereços com nomes das cidades.
+        description: Table with address and city names.
         columns:
           - name: addressid
             tests:
             - unique
             - not_null
       - name: businessentityaddress
-        description: Ligação entre clientes e endereços.
+        description: Table with clients and address link.
         columns:
           - name: addressid
             tests:
             - unique
             - not_null          
       - name: salesorderheader
-        description: Tabela principal de vendas.
+        description: Main sales table.
         columns:
           - name: salesorderid
             tests:
             - unique
             - not_null          
       - name: salesorderdetail
-        description: Tabela com detalhes sobre as vendas.
+        description: Table for detailing each sale.
         columns:
           - name: salesorderdetailid
             tests:
             - unique
             - not_null          
       - name: salesorderheadersalesreason
-        description: Tabela com IDS da salesorder e salesreason.
+        description: Table to link salesorderheader and salesreason.
         columns:
           - name: salesorderid
             tests:
             - not_null
       - name: salesreason
-        description: Tabela com informações sobre os motivos de compra dos clientes.
+        description: Table with information of reasoning for each sale.
         columns:
           - name: salesreasonid
             tests:
-            - not_null                                                                                                                                                                              
+            - not_null  
+      - name: customer
+        description: Table with information of customers.
+        columns:
+          - name: customerid
+            tests:
+            - unique  
+            - not_null   
+      - name: person
+        description: Table with detailed information of customers.
+        columns:
+          - name: businessentityid
+            tests:
+            - unique  
+            - not_null 
+      - name: businessentitycontact
+        description: Link between person_id and businessentity_id.
+        columns:
+          - name: businessentityid
+            tests:
+            - unique  
+            - not_null                                                                                                                                                                               
