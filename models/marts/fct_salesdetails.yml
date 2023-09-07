@@ -4,15 +4,13 @@ models:
   - name: fct_salesdetails
     description: Fact sales with details.
     columns: 
-      - name: orderdetail_pk
+      - name: orderdetail_id
         description: primary key for fct_salesdetails.
         tests:
           - unique
           - not_null
       - name: order_id
         description: ID for each order.
-      - name: orderdetail_id
-        description: ID for each order detail.
       - name: product_id
         description: ID for each product.
       - name: creditcard_id
