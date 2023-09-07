@@ -25,8 +25,7 @@ with
             , dim_salesdetail.customer_id
             , stg_salesorderheader.shiptoaddress_id
             , dim_location.stateprovince_id
-            , dim_location.country_code            
-            , dim_salesdetail.status
+            , dim_location.country_code
             , dim_salesdetail.order_date
             , stg_salesorderdetail.order_qty
             , stg_salesorderdetail.unit_price
