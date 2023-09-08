@@ -5,7 +5,7 @@ models:
     description: Fact sales with details.
     columns: 
       - name: orderdetail_id
-        description: primary key for fct_salesdetails.
+        description: Primary key for fct_salesdetails, with ID for each order detailed.
         tests:
           - unique
           - not_null
@@ -17,8 +17,6 @@ models:
         description: ID for each creditcard.
       - name: customer_id
         description: ID for each customer.
-      - name: reason_id
-        description: ID for each reason of the order.
       - name: shiptoaddress_id
         description: ID for each address the order have to be shipped.
       - name: stateprovince_id
@@ -30,10 +28,10 @@ models:
       - name: order_date
         description: Date of the orders.
       - name: order_qty
-        description: Quantity of products for each order.
+        description: Quantity of products for each order_detail.
       - name: unit_price
         description: Price of unit for each product.
       - name: unitprice_discount
         description: Discount of each product per unit.
       - name: total
-        description: Total of the order.
+        description: Total of the order (unit_price * order_qty).

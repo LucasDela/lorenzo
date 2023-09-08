@@ -2,19 +2,17 @@ version: 2
 
 models:
   - name: dim_location
-    description: Table with location information for each client.
+    description: Table with location information.
     columns: 
       - name: address_id
-        description: primary key for dim_products and ID for each address.
+        description: Primary key for dim_products, used to connect with fct_salesdetails shiptoaddress_id.
         tests:
           - unique
           - not_null
-      - name: client_id
-        description: ID for each client.
+      - name: businessentity_id
+        description: ID for each businessentity, used to connect with customer.
       - name: country_code
-        description: code for each country.
-      - name: territory_id
-        description: ID for each territory.
+        description: Code for each country.
       - name: stateprovince_id
         description: ID for each state province.
       - name: state_code

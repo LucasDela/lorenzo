@@ -18,9 +18,8 @@ with
     , dim_location as (
         select
             address.address_id
-            , businessentityaddress.client_id
+            , businessentityaddress.businessentity_id
             , countryregion.country_code
-            , stateprovince.territory_id
             , stateprovince.stateprovince_id
             , stateprovince.state_code
             , stateprovince.statename

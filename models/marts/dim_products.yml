@@ -2,21 +2,21 @@ version: 2
 
 models:
   - name: dim_products
-    description: Products dimension table.
+    description: Products dimension table with IDS to use for connections and product information.
     columns: 
       - name: product_id
-        description: primary key for dim_products.
+        description: Primary key for dim_products, used to connect with fct_salesdetails.
         tests:
           - unique
           - not_null
       - name: productsubcategory_id
-        description: ID for each subcategory.	
+        description: ID for each product subcategory.	
       - name: productcategory_id
-        description: ID for each category.
+        description: ID for each product category.
       - name: subcategoryname
-        description: Name for each subcategory.
+        description: Name for each product subcategory.
       - name: categoryname
-        description: Name for each category.
+        description: Name for each product category.
       - name: productname
         description: Name of each product.
       - name: productcolor

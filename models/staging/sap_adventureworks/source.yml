@@ -25,13 +25,6 @@ sources:
             tests:
             - unique
             - not_null
-      - name: store
-        description: Table with name and ID for each client store.
-        columns:
-          - name: businessentityid
-            tests:
-            - unique
-            - not_null
       - name: personcreditcard
         description: Table with IDs for creditcard and clients link.
         columns:
@@ -46,29 +39,22 @@ sources:
             tests:
             - unique
             - not_null      
-      - name: businessentity
-        description: Table with businessentity IDS.
-        columns:
-          - name: businessentityid
-            tests:
-            - unique
-            - not_null       
       - name: stateprovince
-        description: Table with information of country and state province.
+        description: Table with information of country state province and ID for links.
         columns:
           - name: stateprovinceid
             tests:
             - unique
             - not_null       
       - name: countryregion
-        description: Table with country's name and and code.
+        description: Table with country's name and code.
         columns:
           - name: countryregioncode
             tests:
             - unique
             - not_null       
       - name: address
-        description: Table with address and city names.
+        description: Table with address and city names and IDS.
         columns:
           - name: addressid
             tests:
