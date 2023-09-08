@@ -2,18 +2,18 @@ version: 2
 
 models:
   - name: dim_clients
-    description: Clients dimension table.
+    description: Clients dimension table with information about client's credit card and name.
     columns: 
       - name: customer_id
-        description: primary key for dim_clients.
+        description: Primary key for dim_clients used to link with fct_salesdetails.
         tests:
           - unique
           - not_null
       - name: person_id
-        description: ID for each credit card.
+        description: ID column used to make a connection between clients and creditcards.
       - name: creditcard_id
-        description: Type of each credit card.
-      - name: territory_id
-        description: Name of each client.
+        description: ID for each creditcard, used to make a connection for each client to the respective credit card and to connect with fct_salesdetails.
       - name: full_name
+        description: Client full name.
       - name: cardtype
+        description: Type of each credit card.
